@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Axios Example</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    // 封装 Axios
+    const myAxios = axios.create({
+      baseURL: 'https://api.example.com/',
+      timeout: 10000,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    // 发起 GET 请求
+    myAxios.get('/data')
+      .then(response => {
+        console.log(response.data);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+
+    // 发起 POST 请求
+    myAxios.post('/data', { key: 'value' })
+      .then(response => {
+        console.log(response.data);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  </script>
+</head>
+<body>
+  <h1>Axios Example</h1>
+</body>
+</html>
