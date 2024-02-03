@@ -1,0 +1,46 @@
+
+.displayComment{
+  display: block;
+  height:'350px';
+  overflow:'auto';
+}
+
+/* :style="{display: displayStatus, height:'350px' , overflow:'auto',} " */
+
+  .containerrow{
+    display: flex;
+    flex-direction: row;
+
+  
+  }
+
+
+
+
+  .disablescrolll {
+    
+  }
+
+  .disablescrollc {
+
+   margin-left: 20px;
+   margin-right: 20px;
+ 
+ 
+  
+    
+  }
+
+
+
+  .disablescrollr {
+
+
+    
+    
+    
+  }
+
+
+
+
