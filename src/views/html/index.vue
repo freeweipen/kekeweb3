@@ -11,11 +11,11 @@ Header START -->
       <div class="container">
         <!-- Logo START -->
         <a class="navbar-brand" href="index.html">
-          <img class="light-mode-item navbar-brand-item rounded-1" src="assets/images/logo3.png" alt="logo"
+          <img class="light-mode-item navbar-brand-item rounded-1" src="@/assets/images/logo3.png" alt="logo"
             style="height: 40px" />
 
-          <!-- <img class="light-mode-item navbar-brand-item" src="assets/images/logo.svg" alt="logo" />
-        <img class="dark-mode-item navbar-brand-item" src="assets/images/logo.svg" alt="logo" /> -->
+          <!-- <img class="light-mode-item navbar-brand-item" src="@/assets/images/logo.svg" alt="logo" />
+        <img class="dark-mode-item navbar-brand-item" src="@/assets/images/logo.svg" alt="logo" /> -->
         </a>
         <!-- Logo END -->
 
@@ -182,7 +182,7 @@ Header START -->
                       <div
                         class="list-group-item list-group-item-action rounded badge-unread d-flex border-0 mb-1 p-3">
                         <div class="avatar text-center d-none d-sm-inline-block">
-                          <img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="" />
+                          <img class="avatar-img rounded-circle" src="@/assets/images/avatar/01.jpg" alt="" />
                         </div>
                         <div class="ms-sm-3">
                           <div class="d-flex">
@@ -207,7 +207,7 @@ Header START -->
                       <div
                         class="list-group-item list-group-item-action rounded badge-unread d-flex border-0 mb-1 p-3 position-relative">
                         <div class="avatar text-center d-none d-sm-inline-block">
-                          <img class="avatar-img rounded-circle" src="assets/images/avatar/02.jpg" alt="" />
+                          <img class="avatar-img rounded-circle" src="@/assets/images/avatar/02.jpg" alt="" />
                         </div>
                         <div class="ms-sm-3 d-flex">
                           <div>
@@ -246,7 +246,7 @@ Header START -->
                     <li>
                       <a href="#" class="list-group-item list-group-item-action rounded d-flex border-0 p-3 mb-1">
                         <div class="avatar text-center d-none d-sm-inline-block">
-                          <img class="avatar-img rounded-circle" src="assets/images/logo/12.svg" alt="" />
+                          <img class="avatar-img rounded-circle" src="@/assets/images/logo/12.svg" alt="" />
                         </div>
                         <div class="ms-sm-3 d-flex">
                           <p class="small mb-2">
@@ -271,7 +271,7 @@ Header START -->
           <li class="nav-item ms-2 dropdown">
             <a class="nav-link btn icon-md p-0" href="#" id="profileDropdown" role="button"
               data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
-              <img class="avatar-img rounded-2" src="assets/images/avatar/07.jpg" alt="" />
+              <img class="avatar-img rounded-2" src="@/assets/images/avatar/07.jpg" alt="" />
             </a>
             <ul class="dropdown-menu dropdown-animation dropdown-menu-end pt-3 small me-md-n3"
               aria-labelledby="profileDropdown">
@@ -280,7 +280,7 @@ Header START -->
                 <div class="d-flex align-items-center position-relative">
                   <!-- Avatar -->
                   <div class="avatar me-3">
-                    <img class="avatar-img rounded-circle" src="assets/images/avatar/07.jpg" alt="avatar" />
+                    <img class="avatar-img rounded-circle" src="@/assets/images/avatar/07.jpg" alt="avatar" />
                   </div>
                   <div>
                     <a class="h6 stretched-link" href="#">Lori Ferguson</a>
@@ -380,7 +380,7 @@ Header END -->
                       <!-- Avatar -->
                       <div class="avatar avatar-lg mt-n5 mb-3">
                         <a href="#!"><img class="avatar-img rounded border border-white border-3"
-                            src="assets/images/avatar/07.jpg" alt="" /></a>
+                            src="@/assets/images/avatar/07.jpg" alt="" /></a>
                       </div>
                       <!-- Info -->
                       <h5 class="mb-0"><a href="#!">匿名新用户</a></h5>
@@ -421,37 +421,37 @@ Header END -->
                     <ul class="nav nav-link-secondary flex-column fw-bold gap-2">
                       <li class="nav-item">
                         <a class="nav-link" href="my-profile.html">
-                          <img class="me-2 h-20px fa-fw" src="assets/images/icon/home-outline-filled.svg"
+                          <img class="me-2 h-20px fa-fw" src="@/assets/images/icon/home-outline-filled.svg"
                             alt="" /><span>动态</span></a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="my-profile-connections.html">
-                          <img class="me-2 h-20px fa-fw" src="assets/images/icon/person-outline-filled.svg"
+                          <img class="me-2 h-20px fa-fw" src="@/assets/images/icon/person-outline-filled.svg"
                             alt="" /><span>联系</span></a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="blog.html">
-                          <img class="me-2 h-20px fa-fw" src="assets/images/icon/earth-outline-filled.svg"
+                          <img class="me-2 h-20px fa-fw" src="@/assets/images/icon/earth-outline-filled.svg"
                             alt="" /><span>最新消息</span></a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="events.html">
-                          <img class="me-2 h-20px fa-fw" src="assets/images/icon/calendar-outline-filled.svg"
+                          <img class="me-2 h-20px fa-fw" src="@/assets/images/icon/calendar-outline-filled.svg"
                             alt="" /><span>事件 </span></a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="groups.html">
-                          <img class="me-2 h-20px fa-fw" src="assets/images/icon/chat-outline-filled.svg"
+                          <img class="me-2 h-20px fa-fw" src="@/assets/images/icon/chat-outline-filled.svg"
                             alt="" /><span>群组</span></a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="notifications.html">
-                          <img class="me-2 h-20px fa-fw" src="assets/images/icon/notification-outlined-filled.svg"
+                          <img class="me-2 h-20px fa-fw" src="@/assets/images/icon/notification-outlined-filled.svg"
                             alt="" /><span>通知</span></a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="settings.html">
-                          <img class="me-2 h-20px fa-fw" src="assets/images/icon/cog-outline-filled.svg"
+                          <img class="me-2 h-20px fa-fw" src="@/assets/images/icon/cog-outline-filled.svg"
                             alt="" /><span>设置</span></a>
                       </li>
                     </ul>
@@ -511,7 +511,7 @@ Header END -->
               <!-- Avatar -->
               <div class="avatar avatar-xs me-2">
                 <a href="#">
-                  <img class="avatar-img rounded-circle" src="assets/images/avatar/placeholder.jpg" alt="" />
+                  <img class="avatar-img rounded-circle" src="@/assets/images/avatar/placeholder.jpg" alt="" />
                 </a>
               </div>
               <!-- Post input -->
@@ -561,7 +561,7 @@ Header END -->
                   <!-- Avatar -->
                   <div class="avatar avatar-story me-2">
                     <a href="#!">
-                      <img class="avatar-img rounded-circle" src="assets/images/avatar/12.jpg" alt="" />
+                      <img class="avatar-img rounded-circle" src="@/assets/images/avatar/12.jpg" alt="" />
                     </a>
                   </div>
                   <!-- Info -->
@@ -691,7 +691,7 @@ Header END -->
                 <!-- Avatar -->
                 <div class="avatar avatar-xs me-2">
                   <a href="#!">
-                    <img class="avatar-img rounded-circle" src="assets/images/avatar/12.jpg" alt="" />
+                    <img class="avatar-img rounded-circle" src="@/assets/images/avatar/12.jpg" alt="" />
                   </a>
                 </div>
                 <!-- Comment box  -->
@@ -725,7 +725,7 @@ Header END -->
                       <div class="d-flex">
                         <!-- Avatar -->
                         <div class="avatar avatar-xs">
-                          <a href="#!"><img class="avatar-img rounded-circle" src="assets/images/avatar/05.jpg"
+                          <a href="#!"><img class="avatar-img rounded-circle" src="@/assets/images/avatar/05.jpg"
                               alt="" /></a>
                         </div>
                         <div class="ms-2">
@@ -763,7 +763,7 @@ Header END -->
                           <div class="d-flex">
                             <!-- Avatar -->
                             <div class="avatar avatar-xs">
-                              <a href="#!"><img class="avatar-img rounded-circle" src="assets/images/avatar/06.jpg"
+                              <a href="#!"><img class="avatar-img rounded-circle" src="@/assets/images/avatar/06.jpg"
                                   alt="" /></a>
                             </div>
                             <!-- Comment by -->
@@ -859,7 +859,7 @@ Header END -->
                   <div class="hstack gap-2 mb-3">
                     <!-- Avatar -->
                     <div class="avatar">
-                      <a href="#!"><img class="avatar-img rounded-circle" src="assets/images/avatar/04.jpg"
+                      <a href="#!"><img class="avatar-img rounded-circle" src="@/assets/images/avatar/04.jpg"
                           alt="" /></a>
                     </div>
                     <!-- Title -->
@@ -877,7 +877,7 @@ Header END -->
                     <!-- Avatar -->
                     <div class="avatar avatar-story">
                       <a href="#!">
-                        <img class="avatar-img rounded-circle" src="assets/images/avatar/05.jpg" alt="" />
+                        <img class="avatar-img rounded-circle" src="@/assets/images/avatar/05.jpg" alt="" />
                       </a>
                     </div>
                     <!-- Title -->
@@ -896,7 +896,7 @@ Header END -->
                     <!-- Avatar -->
                     <div class="avatar">
                       <a href="#">
-                        <img class="avatar-img rounded-circle" src="assets/images/avatar/11.jpg" alt="" />
+                        <img class="avatar-img rounded-circle" src="@/assets/images/avatar/11.jpg" alt="" />
                       </a>
                     </div>
                     <!-- Title -->
@@ -915,7 +915,7 @@ Header END -->
                     <!-- Avatar -->
                     <div class="avatar">
                       <a href="#">
-                        <img class="avatar-img rounded-circle" src="assets/images/avatar/placeholder.jpg" alt="" />
+                        <img class="avatar-img rounded-circle" src="@/assets/images/avatar/placeholder.jpg" alt="" />
                       </a>
                     </div>
                     <!-- Title -->
@@ -936,7 +936,7 @@ Header END -->
                     <!-- Avatar -->
                     <div class="avatar">
                       <a href="#">
-                        <img class="avatar-img rounded-circle" src="assets/images/avatar/placeholder.jpg" alt="" />
+                        <img class="avatar-img rounded-circle" src="@/assets/images/avatar/placeholder.jpg" alt="" />
                       </a>
                     </div>
                     <!-- Title -->
@@ -1101,7 +1101,7 @@ Header END -->
           <li class="mt-3 hstack gap-3 align-items-center position-relative toast-btn" data-target="chatToast">
             <!-- Avatar -->
             <div class="avatar status-online">
-              <img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="" />
+              <img class="avatar-img rounded-circle" src="@/assets/images/avatar/01.jpg" alt="" />
             </div>
             <!-- Info -->
             <div class="overflow-hidden">
@@ -1119,7 +1119,7 @@ Header END -->
           <li class="mt-3 hstack gap-3 align-items-center position-relative toast-btn" data-target="chatToast2">
             <!-- Avatar -->
             <div class="avatar status-online">
-              <img class="avatar-img rounded-circle" src="assets/images/avatar/02.jpg" alt="" />
+              <img class="avatar-img rounded-circle" src="@/assets/images/avatar/02.jpg" alt="" />
             </div>
             <!-- Info -->
             <div class="overflow-hidden">
@@ -1136,7 +1136,7 @@ Header END -->
           <li class="mt-3 hstack gap-3 align-items-center position-relative">
             <!-- Avatar -->
             <div class="avatar status-offline">
-              <img class="avatar-img rounded-circle" src="assets/images/avatar/placeholder.jpg" alt="" />
+              <img class="avatar-img rounded-circle" src="@/assets/images/avatar/placeholder.jpg" alt="" />
             </div>
             <!-- Info -->
             <div class="overflow-hidden">
@@ -1153,7 +1153,7 @@ Header END -->
           <li class="mt-3 hstack gap-3 align-items-center position-relative">
             <!-- Avatar -->
             <div class="avatar">
-              <img class="avatar-img rounded-circle" src="assets/images/avatar/04.jpg" alt="" />
+              <img class="avatar-img rounded-circle" src="@/assets/images/avatar/04.jpg" alt="" />
             </div>
             <!-- Info -->
             <div class="overflow-hidden">
@@ -1171,7 +1171,7 @@ Header END -->
           <li class="mt-3 hstack gap-3 align-items-center position-relative">
             <!-- Avatar -->
             <div class="avatar avatar-story status-online">
-              <img class="avatar-img rounded-circle" src="assets/images/avatar/05.jpg" alt="" />
+              <img class="avatar-img rounded-circle" src="@/assets/images/avatar/05.jpg" alt="" />
             </div>
             <!-- Info -->
             <div class="overflow-hidden">
@@ -1188,7 +1188,7 @@ Header END -->
           <li class="mt-3 hstack gap-3 align-items-center position-relative">
             <!-- Avatar -->
             <div class="avatar status-online">
-              <img class="avatar-img rounded-circle" src="assets/images/avatar/06.jpg" alt="" />
+              <img class="avatar-img rounded-circle" src="@/assets/images/avatar/06.jpg" alt="" />
             </div>
             <!-- Info -->
             <div class="overflow-hidden">
@@ -1207,16 +1207,16 @@ Header END -->
             <div class="flex-shrink-0 avatar">
               <ul class="avatar-group avatar-group-four">
                 <li class="avatar avatar-xxs">
-                  <img class="avatar-img rounded-circle" src="assets/images/avatar/06.jpg" alt="avatar" />
+                  <img class="avatar-img rounded-circle" src="@/assets/images/avatar/06.jpg" alt="avatar" />
                 </li>
                 <li class="avatar avatar-xxs">
-                  <img class="avatar-img rounded-circle" src="assets/images/avatar/07.jpg" alt="avatar" />
+                  <img class="avatar-img rounded-circle" src="@/assets/images/avatar/07.jpg" alt="avatar" />
                 </li>
                 <li class="avatar avatar-xxs">
-                  <img class="avatar-img rounded-circle" src="assets/images/avatar/08.jpg" alt="avatar" />
+                  <img class="avatar-img rounded-circle" src="@/assets/images/avatar/08.jpg" alt="avatar" />
                 </li>
                 <li class="avatar avatar-xxs">
-                  <img class="avatar-img rounded-circle" src="assets/images/avatar/09.jpg" alt="avatar" />
+                  <img class="avatar-img rounded-circle" src="@/assets/images/avatar/09.jpg" alt="avatar" />
                 </li>
               </ul>
             </div>
@@ -1236,7 +1236,7 @@ Header END -->
           <li class="mt-3 hstack gap-3 align-items-center position-relative">
             <!-- Avatar -->
             <div class="avatar status-offline">
-              <img class="avatar-img rounded-circle" src="assets/images/avatar/08.jpg" alt="" />
+              <img class="avatar-img rounded-circle" src="@/assets/images/avatar/08.jpg" alt="" />
             </div>
             <!-- Info -->
             <div class="overflow-hidden">
@@ -1253,7 +1253,7 @@ Header END -->
           <li class="mt-3 hstack gap-3 align-items-center position-relative">
             <!-- Avatar -->
             <div class="avatar">
-              <img class="avatar-img rounded-circle" src="assets/images/avatar/09.jpg" alt="" />
+              <img class="avatar-img rounded-circle" src="@/assets/images/avatar/09.jpg" alt="" />
             </div>
             <!-- Info -->
             <div class="overflow-hidden">
@@ -1271,7 +1271,7 @@ Header END -->
           <li class="mt-3 hstack gap-3 align-items-center position-relative">
             <!-- Avatar -->
             <div class="avatar status-online">
-              <img class="avatar-img rounded-circle" src="assets/images/avatar/10.jpg" alt="" />
+              <img class="avatar-img rounded-circle" src="@/assets/images/avatar/10.jpg" alt="" />
             </div>
             <!-- Info -->
             <div class="overflow-hidden">
@@ -1289,7 +1289,7 @@ Header END -->
           <li class="mt-3 hstack gap-3 align-items-center position-relative">
             <!-- Avatar -->
             <div class="avatar">
-              <img class="avatar-img rounded-circle" src="assets/images/avatar/11.jpg" alt="" />
+              <img class="avatar-img rounded-circle" src="@/assets/images/avatar/11.jpg" alt="" />
             </div>
             <!-- Info -->
             <div class="overflow-hidden">
@@ -1306,7 +1306,7 @@ Header END -->
           <li class="mt-3 hstack gap-3 align-items-center position-relative">
             <!-- Avatar -->
             <div class="avatar status-online">
-              <img class="avatar-img rounded-circle" src="assets/images/avatar/12.jpg" alt="" />
+              <img class="avatar-img rounded-circle" src="@/assets/images/avatar/12.jpg" alt="" />
             </div>
             <!-- Info -->
             <div class="overflow-hidden">
@@ -1343,7 +1343,7 @@ Header END -->
             <div class="d-flex justify-content-between align-items-center w-100">
               <div class="d-flex">
                 <div class="flex-shrink-0 avatar me-2">
-                  <img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="" />
+                  <img class="avatar-img rounded-circle" src="@/assets/images/avatar/01.jpg" alt="" />
                 </div>
                 <div class="flex-grow-1">
                   <h6 class="mb-0 mt-1">Frances Guerrero</h6>
@@ -1406,7 +1406,7 @@ Header END -->
               <!-- Chat message left -->
               <div class="d-flex mb-1">
                 <div class="flex-shrink-0 avatar avatar-xs me-2">
-                  <img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="" />
+                  <img class="avatar-img rounded-circle" src="@/assets/images/avatar/01.jpg" alt="" />
                 </div>
                 <div class="flex-grow-1">
                   <div class="w-100">
@@ -1432,7 +1432,7 @@ Header END -->
               <!-- Chat message left -->
               <div class="d-flex mb-1">
                 <div class="flex-shrink-0 avatar avatar-xs me-2">
-                  <img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="" />
+                  <img class="avatar-img rounded-circle" src="@/assets/images/avatar/01.jpg" alt="" />
                 </div>
                 <div class="flex-grow-1">
                   <div class="w-100">
@@ -1450,7 +1450,7 @@ Header END -->
               <!-- Chat message left -->
               <div class="d-flex mb-1">
                 <div class="flex-shrink-0 avatar avatar-xs me-2">
-                  <img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="" />
+                  <img class="avatar-img rounded-circle" src="@/assets/images/avatar/01.jpg" alt="" />
                 </div>
                 <div class="flex-grow-1">
                   <div class="w-100">
@@ -1485,7 +1485,7 @@ Header END -->
               <!-- Chat Typing -->
               <div class="d-flex mb-1">
                 <div class="flex-shrink-0 avatar avatar-xs me-2">
-                  <img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="" />
+                  <img class="avatar-img rounded-circle" src="@/assets/images/avatar/01.jpg" alt="" />
                 </div>
                 <div class="flex-grow-1">
                   <div class="w-100">
@@ -1534,7 +1534,7 @@ Header END -->
             <div class="d-flex justify-content-between align-items-center w-100">
               <div class="d-flex">
                 <div class="flex-shrink-0 avatar me-2">
-                  <img class="avatar-img rounded-circle" src="assets/images/avatar/02.jpg" alt="" />
+                  <img class="avatar-img rounded-circle" src="@/assets/images/avatar/02.jpg" alt="" />
                 </div>
                 <div class="flex-grow-1">
                   <h6 class="mb-0 mt-1">Lori Ferguson</h6>
@@ -1597,7 +1597,7 @@ Header END -->
               <!-- Chat message left -->
               <div class="d-flex mb-1">
                 <div class="flex-shrink-0 avatar avatar-xs me-2">
-                  <img class="avatar-img rounded-circle" src="assets/images/avatar/02.jpg" alt="" />
+                  <img class="avatar-img rounded-circle" src="@/assets/images/avatar/02.jpg" alt="" />
                 </div>
                 <div class="flex-grow-1">
                   <div class="w-100">
@@ -1623,7 +1623,7 @@ Header END -->
               <!-- Chat message left -->
               <div class="d-flex mb-1">
                 <div class="flex-shrink-0 avatar avatar-xs me-2">
-                  <img class="avatar-img rounded-circle" src="assets/images/avatar/02.jpg" alt="" />
+                  <img class="avatar-img rounded-circle" src="@/assets/images/avatar/02.jpg" alt="" />
                 </div>
                 <div class="flex-grow-1">
                   <div class="w-100">
@@ -1641,7 +1641,7 @@ Header END -->
               <!-- Chat message left -->
               <div class="d-flex mb-1">
                 <div class="flex-shrink-0 avatar avatar-xs me-2">
-                  <img class="avatar-img rounded-circle" src="assets/images/avatar/02.jpg" alt="" />
+                  <img class="avatar-img rounded-circle" src="@/assets/images/avatar/02.jpg" alt="" />
                 </div>
                 <div class="flex-grow-1">
                   <div class="w-100">
@@ -1676,7 +1676,7 @@ Header END -->
               <!-- Chat Typing -->
               <div class="d-flex mb-1">
                 <div class="flex-shrink-0 avatar avatar-xs me-2">
-                  <img class="avatar-img rounded-circle" src="assets/images/avatar/02.jpg" alt="" />
+                  <img class="avatar-img rounded-circle" src="@/assets/images/avatar/02.jpg" alt="" />
                 </div>
                 <div class="flex-grow-1">
                   <div class="w-100">
@@ -1740,7 +1740,7 @@ Header END -->
           <div class="d-flex mb-3">
             <!-- Avatar -->
             <div class="avatar avatar-xs me-2">
-              <img class="avatar-img rounded-circle" src="assets/images/avatar/03.jpg" alt="" />
+              <img class="avatar-img rounded-circle" src="@/assets/images/avatar/03.jpg" alt="" />
             </div>
             <!-- Feed box  -->
             <form class="w-100">
@@ -1825,7 +1825,7 @@ Header END -->
           <div class="d-flex mb-3">
             <!-- Avatar -->
             <div class="avatar avatar-xs me-2">
-              <img class="avatar-img rounded-circle" src="assets/images/avatar/03.jpg" alt="" />
+              <img class="avatar-img rounded-circle" src="@/assets/images/avatar/03.jpg" alt="" />
             </div>
             <!-- Feed box  -->
             <form class="w-100">
@@ -1882,7 +1882,7 @@ Header END -->
           <div class="d-flex mb-3">
             <!-- Avatar -->
             <div class="avatar avatar-xs me-2">
-              <img class="avatar-img rounded-circle" src="assets/images/avatar/03.jpg" alt="" />
+              <img class="avatar-img rounded-circle" src="@/assets/images/avatar/03.jpg" alt="" />
             </div>
             <!-- Feed box  -->
             <form class="w-100">
@@ -1999,25 +1999,25 @@ Header END -->
             <div class="col-12 mt-3">
               <ul class="avatar-group list-unstyled align-items-center mb-0">
                 <li class="avatar avatar-xs">
-                  <img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="avatar" />
+                  <img class="avatar-img rounded-circle" src="@/assets/images/avatar/01.jpg" alt="avatar" />
                 </li>
                 <li class="avatar avatar-xs">
-                  <img class="avatar-img rounded-circle" src="assets/images/avatar/02.jpg" alt="avatar" />
+                  <img class="avatar-img rounded-circle" src="@/assets/images/avatar/02.jpg" alt="avatar" />
                 </li>
                 <li class="avatar avatar-xs">
-                  <img class="avatar-img rounded-circle" src="assets/images/avatar/03.jpg" alt="avatar" />
+                  <img class="avatar-img rounded-circle" src="@/assets/images/avatar/03.jpg" alt="avatar" />
                 </li>
                 <li class="avatar avatar-xs">
-                  <img class="avatar-img rounded-circle" src="assets/images/avatar/04.jpg" alt="avatar" />
+                  <img class="avatar-img rounded-circle" src="@/assets/images/avatar/04.jpg" alt="avatar" />
                 </li>
                 <li class="avatar avatar-xs">
-                  <img class="avatar-img rounded-circle" src="assets/images/avatar/05.jpg" alt="avatar" />
+                  <img class="avatar-img rounded-circle" src="@/assets/images/avatar/05.jpg" alt="avatar" />
                 </li>
                 <li class="avatar avatar-xs">
-                  <img class="avatar-img rounded-circle" src="assets/images/avatar/06.jpg" alt="avatar" />
+                  <img class="avatar-img rounded-circle" src="@/assets/images/avatar/06.jpg" alt="avatar" />
                 </li>
                 <li class="avatar avatar-xs">
-                  <img class="avatar-img rounded-circle" src="assets/images/avatar/07.jpg" alt="avatar" />
+                  <img class="avatar-img rounded-circle" src="@/assets/images/avatar/07.jpg" alt="avatar" />
                 </li>
                 <li class="ms-3">
                   <small> +50 </small>
