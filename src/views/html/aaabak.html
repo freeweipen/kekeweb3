@@ -1,97 +1,12 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <style>
-    #drop-area {
-      border: 2px dashed #ccc;
-      width: 200px;
-      height: 200px;
-      text-align: center;
-      line-height: 200px;
-      font-size: 20px;
-      margin: 20px auto;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
-
 <body>
-
-  <input type="file" name="files" id="files" multiple>
-
-
-  <h2>上传文件</h2>
-  <div id="fileUpload" onclick="triggerFileInput()">
-    点击选择文件
-  </div>
-
-  <div id="drop-area" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);"> Drag and drop files here </div>
-  <script>
-
-
-function triggerFileInput() {
-      var fileInput = document.createElement('input');
-      fileInput.type = 'file';
-      fileInput.multiple = true; 
-      fileInput.style.display = 'none';
-      fileInput.onchange = function() {
-        var file = fileInput.files[0];
-        // 在这里添加文件上传逻辑，可以使用 XMLHttpRequest 或者 Fetch API 发送文件到服务器
-        console.log('选择的文件：', file.name);
-
-        uploadFile(file);
-
-      };
-      document.body.appendChild(fileInput);
-      fileInput.click();
-    }
-
-    
-    function dragOverHandler(event) { event.preventDefault(); }
-    function dropHandler(event) {
-      event.preventDefault();
-      var files = event.dataTransfer.files;
-      for (var i = 0; i < files.length; i++) { uploadFile(files[i]); }
-    }
-
-
-    function uploadFile(file) {
-      var formData = new FormData();
-      formData.append('file', file);
-      var xhr = new XMLHttpRequest();
-      xhr.open('POST', 'upload.php', true);
-      xhr.onload = function () {
-        if (xhr.status === 200) {
-          alert('File uploaded successfully');
-        } else {
-          alert('File upload failed');
-        }
-      };
-      xhr.send(formData);
-    } 
-
-
-
-
-
-    function triggerFileInput() {
-  var fileInput = document.createElement('input');
-  fileInput.type = 'file';
-  fileInput.multiple = true; // 允许多选
-  fileInput.style.display = 'none';
-  fileInput.onchange = function() {
-    var files = fileInput.files;
-    for (var i = 0; i < files.length; i++) {
-      // 在这里添加文件上传逻辑，可以使用 XMLHttpRequest 或者 Fetch API 发送文件到服务器
-      console.log('选择的文件：', files[i].name);
-    }
-  };
-  document.body.appendChild(fileInput);
-  fileInput.click();
-}
-
-
-  </script>
+  <a>最新消息</a>
 </body>
-
 </html>

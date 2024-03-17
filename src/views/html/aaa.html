@@ -1,26 +1,150 @@
-<template>
-  <div>
-   <link rel="stylesheet" href="../../../public/assets/css/style.css">
-  
-   <img src="@/assets/vue.svg" alt="" style="width: 100px; height: 100px;">
-aaaa
-  </div>
-</template>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  aaaaaaaaaaaaa
+</body>
+<script src="assets/js/axios.min.js"></script>
 
 <script>
-import '@/assets/aa.js';
+
+var xhr = new XMLHttpRequest();
+xhr.open('POST', 'http://127.0.0.1/api/video/videoList/getVideoList333', true);
+xhr.withCredentials = true; // 允许携带cookie
 
 
-  export default {
-    
+xhr.onreadystatechange = function() {
+  if (xhr.readyState === XMLHttpRequest.DONE) {
+    if (xhr.status === 200) {
+      console.log(xhr.responseText);
+    } else {
+      console.error('请求失败');
+    }
   }
+};
+xhr.send();
+
+
 </script>
 
-<style  scoped>
-@import '@/assets/aa.css';
+
+
+
+
+<script>
 
 
 
 
 
-</style>
+const service = axios.create({
+  baseURL: process.env.VUE_APP_BASE_API, // 环境变量base接口地址 url = base url + request url
+  withCredentials: true, // 跨域请求时发送Cookie
+  timeout: 60000, // 请求超时
+  headers: {
+    "Content-Type": "application/json; charset=UTF-8;"
+  }
+});
+
+
+
+
+// axios.defaults.withCredentials = true;
+
+//      // 创建一个axios实例
+//      const instance = axios.create({
+//     baseURL: 'http://web.kekechat.com', // 设置请求的基础URL
+//     timeout: 10000, // 设置超时时间
+//     headers: {
+//       'Content-Type': 'application/json' // 设置请求头
+//     },
+//     withCredentials: true,// 设置允许携带跨域请求的凭据
+//   });
+
+
+
+  // 添加请求拦截器
+  instance.interceptors.request.use(function (config) {
+    // 在发送请求之前做些什么
+    config.headers['Access-Control-Allow-Origin'] = '*'; // 允许跨域请求
+    return config;
+  }, function (error) {
+    // 对请求错误做些什么
+    return Promise.reject(error);
+  });
+
+  // 发送跨域请求
+  instance.get('/api/video/videoList/getVideoList111')
+    .then(response => {
+      console.log("wwwwwwwww"+response.data);
+    })
+    .catch(error => {
+      console.error(error);
+    });
+
+
+
+
+
+
+
+
+
+     // 创建一个axios实例
+     const instance = axios.create({
+    baseURL: 'http://127.0.0.1', // 设置请求的基础URL
+    timeout: 10000, // 设置超时时间
+    headers: {
+      'Content-Type': 'application/json' // 设置请求头
+    },
+    withCredentials: true,// 设置允许携带跨域请求的凭据
+  });
+
+  axios.defaults.withCredentials = true;
+
+  // 添加请求拦截器
+  instance.interceptors.request.use(function (config) {
+    // 在发送请求之前做些什么
+    config.headers['Access-Control-Allow-Origin'] = 'http://127.0.0.1:5500'; // 允许跨域请求
+    return config;
+  }, function (error) {
+    // 对请求错误做些什么
+    return Promise.reject(error);
+  });
+
+  // 发送跨域请求
+  instance.get('/api/video/videoList/getVideoList111')
+    .then(response => {
+      console.log("wwwwwwwww"+response.data);
+    })
+    .catch(error => {
+      console.error(error);
+    });
+
+
+
+    var xhr = new XMLHttpRequest();
+xhr.open('POST', 'http://127.0.0.1/api/video/videoList/getVideoList222', true);
+xhr.withCredentials = true; // 允许携带cookie
+xhr.onreadystatechange = function() {
+  if (xhr.readyState === XMLHttpRequest.DONE) {
+    if (xhr.status === 200) {
+      console.log(xhr.responseText);
+    } else {
+      console.error('请求失败');
+    }
+  }
+};
+xhr.send();
+
+
+
+
+
+</script>
+</html>

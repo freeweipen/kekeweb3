@@ -82,16 +82,23 @@ Header START -->
             <!-- Nav Search END -->
 
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
+
+
+
               <!-- Nav item 1 Demos -->
               <li class="nav-item dropdown">
-                <a class="nav-link active dropdown-toggle" href="#" id="homeMenu" data-bs-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">Demo</a>
-                <ul class="dropdown-menu" aria-labelledby="homeMenu">
-                  <li>
-                    <a class="dropdown-item active" href="index.html">Home default</a>
-                  </li>
-                </ul>
+                <a class="nav-link  " href="#" id="homeMenu" data-bs-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">上传视频</a>
+
               </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link  " href="#" id="homeMenu" data-bs-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">会员充值</a>
+
+              </li>
+
+
               <!-- Nav item 2 Pages -->
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="pagesMenu" data-bs-toggle="dropdown"
@@ -106,8 +113,8 @@ Header START -->
                     <a class="dropdown-item" href="blog-details.html">Blog details</a>
                   </li>
 
-                  
-                 
+
+
                 </ul>
               </li>
 
@@ -169,16 +176,13 @@ Header START -->
                 </ul>
               </li>
 
-              <!-- Nav item 4 Mega menu -->
-              <li class="nav-item">
-                <a class="nav-link" href="my-profile-connections.html">My network</a>
-              </li>
+
             </ul>
           </div>
           <!-- Main navbar END -->
 
           <!-- Nav right START -->
-          <ul class="nav flex-nowrap align-items-center ms-sm-3 list-unstyled" >
+          <ul id="loginStatusNav" class="nav flex-nowrap align-items-center ms-sm-3 list-unstyled">
             <li class="nav-item ms-2">
               <a class="nav-link icon-md btn btn-light p-0" href="messaging.html">
                 <i class="bi bi-chat-left-text-fill fs-6"> </i>
@@ -361,7 +365,7 @@ Header START -->
           <!-- Nav right END -->
 
           <!-- Nav right START 没有登录样式 -->
-          <ul class="nav flex-nowrap align-items-center ms-sm-3 list-unstyled"  style="display: none">
+          <ul id="nologinStatusNav" class="nav flex-nowrap align-items-center ms-sm-3 list-unstyled">
             <li class="nav-item ms-2">
               <a class="btn btn-primary-soft btn-sm my-2 text-center" href="sign-in.html">登录</a>
             </li>
@@ -414,33 +418,32 @@ Header END -->
                               src="assets/images/avatar/07.jpg" alt="" /></a>
                         </div>
                         <!-- Info -->
-                        <h5 class="mb-0"><a href="#!">Sam Lanson </a></h5>
-                        <small>Web Developer at Webestica</small>
+                        <h5 class="mb-0"><a href="#!">匿名新用户</a></h5>
+                        <small>网络新人</small>
                         <p class="mt-3">
-                          I'd love to change the world, but they won’t give me
-                          the source code.
+                          欢迎使用keke社交软件
                         </p>
 
                         <!-- User stat START -->
                         <div class="hstack gap-2 gap-xl-3 justify-content-center">
                           <!-- User stat item -->
                           <div>
-                            <h6 class="mb-0">256</h6>
-                            <small>Post</small>
+                            <h6 class="mb-0">0</h6>
+                            <small>发布</small>
                           </div>
                           <!-- Divider -->
                           <div class="vr"></div>
                           <!-- User stat item -->
                           <div>
-                            <h6 class="mb-0">2.5K</h6>
-                            <small>Followers</small>
+                            <h6 class="mb-0">0</h6>
+                            <small>粉丝</small>
                           </div>
                           <!-- Divider -->
                           <div class="vr"></div>
                           <!-- User stat item -->
                           <div>
-                            <h6 class="mb-0">365</h6>
-                            <small>Following</small>
+                            <h6 class="mb-0">0</h6>
+                            <small>关注</small>
                           </div>
                         </div>
                         <!-- User stat END -->
@@ -454,37 +457,37 @@ Header END -->
                         <li class="nav-item">
                           <a class="nav-link" href="my-profile.html">
                             <img class="me-2 h-20px fa-fw" src="assets/images/icon/home-outline-filled.svg"
-                              alt="" /><span>Feed </span></a>
+                              alt="" /><span>动态</span></a>
                         </li>
                         <li class="nav-item">
                           <a class="nav-link" href="my-profile-connections.html">
                             <img class="me-2 h-20px fa-fw" src="assets/images/icon/person-outline-filled.svg"
-                              alt="" /><span>Connections </span></a>
+                              alt="" /><span>联系</span></a>
                         </li>
                         <li class="nav-item">
                           <a class="nav-link" href="blog.html">
                             <img class="me-2 h-20px fa-fw" src="assets/images/icon/earth-outline-filled.svg"
-                              alt="" /><span>Latest News </span></a>
+                              alt="" /><span>最新消息</span></a>
                         </li>
                         <li class="nav-item">
                           <a class="nav-link" href="events.html">
                             <img class="me-2 h-20px fa-fw" src="assets/images/icon/calendar-outline-filled.svg"
-                              alt="" /><span>Events </span></a>
+                              alt="" /><span>事件 </span></a>
                         </li>
                         <li class="nav-item">
                           <a class="nav-link" href="groups.html">
                             <img class="me-2 h-20px fa-fw" src="assets/images/icon/chat-outline-filled.svg"
-                              alt="" /><span>Groups </span></a>
+                              alt="" /><span>群组</span></a>
                         </li>
                         <li class="nav-item">
                           <a class="nav-link" href="notifications.html">
                             <img class="me-2 h-20px fa-fw" src="assets/images/icon/notification-outlined-filled.svg"
-                              alt="" /><span>Notifications </span></a>
+                              alt="" /><span>通知</span></a>
                         </li>
                         <li class="nav-item">
                           <a class="nav-link" href="settings.html">
                             <img class="me-2 h-20px fa-fw" src="assets/images/icon/cog-outline-filled.svg"
-                              alt="" /><span>Settings </span></a>
+                              alt="" /><span>设置</span></a>
                         </li>
                       </ul>
                       <!-- Side Nav END -->
@@ -543,7 +546,7 @@ Header END -->
                 <!-- Avatar -->
                 <div class="avatar avatar-xs me-2">
                   <a href="#">
-                    <img class="avatar-img rounded-circle" src="assets/images/avatar/03.jpg" alt="" />
+                    <img class="avatar-img rounded-circle" src="assets/images/avatar/placeholder.jpg" alt="" />
                   </a>
                 </div>
                 <!-- Post input -->
@@ -575,7 +578,7 @@ Header END -->
                     data-bs-target="#modalCreateFeed">
                     <i class="bi bi-emoji-smile-fill text-warning pe-2"></i>日常活动</a>
                 </li>
-               
+
               </ul>
               <!-- Share feed toolbar END -->
             </div>
@@ -602,9 +605,9 @@ Header END -->
                         <h6 class="nav-item card-title mb-0">
                           <a href="#!"> Joan Wallace </a>
                         </h6>
-                        <span class="nav-item small"> 1day</span>
+                        <span class="nav-item small"> {{computedDayNum(item.uploadTime) }}天</span>
                       </div>
-                      <p class="mb-0 small">12 January at 12:00</p>
+                      <p class="mb-0 small">{{item.uploadTime}}</p>
                     </div>
                   </div>
                   <!-- Card feed action dropdown START -->
@@ -652,9 +655,9 @@ Header END -->
               <!-- Card body START -->
               <div class="card-body pb-0">
                 <p>
-                  Comfort reached gay perhaps chamber hisaaaaaaaaaaaaaa
-                  <a href="#!">#internship</a> <a href="#!">#hiring</a>
-                  <a href="#!">#apply</a>
+                  {{item.title}}
+                  <!-- <a href="#!">#internship</a> <a href="#!">#hiring</a>
+                  <a href="#!">#apply</a> -->
                 </p>
               </div>
               <!-- Card img -->
@@ -750,7 +753,8 @@ Header END -->
 
                     <!-- displayComment渲染ul失效 后面添加style -->
 
-                    <ul class=" comment-wrap list-unstyled mb-0 displayComment " v-if="key == item.id " style="height: 350px; overflow: auto;">
+                    <ul class=" comment-wrap list-unstyled mb-0 displayComment " v-if="key == item.id "
+                      style="height: 350px; overflow: auto;">
                       <!-- Comment item START -->
                       <li class="comment-item" v-for="(comment,key) in commentItem">
                         <div class="d-flex">
@@ -837,11 +841,11 @@ Header END -->
               </div>
               <!-- Card body END -->
               <!-- Card footer START -->
-              <div class="card-footer">
+              <div class="card-footer p-1">
                 <!-- Load more comments -->
                 <a href="#!" @click="getVideoComment" role="button"
                   class="btn btn-light p-0 d-flex justify-content-center align-items-center">
-                  <span>加载更多评论</span>
+                  <span class="">加载更多评论</span>
                 </a>
               </div>
               <!-- Card footer END -->
@@ -849,12 +853,12 @@ Header END -->
             <!-- Card feed item END 2222222222-->
 
             <!-- 加载更多自定义 -->
-            <button @click="getVideoList" class="btn btn-outline-primary" type="button">
+            <button @click="getVideoList" class="btn btn-outline-secondary w-100 mt-2" type="button">
               <span>加载更多</span>
             </button>
 
-            <!-- 请求数据时，使用这个样式 -->
-            <button @click="getVideoList" class="btn btn-primary invisible" type="button">
+            <!-- 请求数据时，使用这个样式 btn btn-primary invisible -->
+            <button @click="getVideoList" class="btn btn-primary w-100 invisible " type="button">
               <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
               <span role="status">加载更多</span>
             </button>
@@ -895,8 +899,8 @@ Header END -->
                       </div>
                       <!-- Title -->
                       <div class="overflow-hidden">
-                        <a class="h6 mb-0" href="#!">Judy Nguyen </a>
-                        <p class="mb-0 small text-truncate">News anchor</p>
+                        <a class="h6 mb-0" href="#!">最新新闻</a>
+                        <p class="mb-0 small text-truncate">最新新闻报道</p>
                       </div>
                       <!-- Button -->
                       <a class="btn btn-primary-soft rounded-circle icon-md ms-auto" href="#"><i
@@ -913,8 +917,8 @@ Header END -->
                       </div>
                       <!-- Title -->
                       <div class="overflow-hidden">
-                        <a class="h6 mb-0" href="#!">Amanda Reed </a>
-                        <p class="mb-0 small text-truncate">Web Developer</p>
+                        <a class="h6 mb-0" href="#!">最新新闻</a>
+                        <p class="mb-0 small text-truncate">最新新闻111</p>
                       </div>
                       <!-- Button -->
                       <a class="btn btn-primary-soft rounded-circle icon-md ms-auto" href="#"><i
@@ -932,8 +936,8 @@ Header END -->
                       </div>
                       <!-- Title -->
                       <div class="overflow-hidden">
-                        <a class="h6 mb-0" href="#!">Billy Vasquez </a>
-                        <p class="mb-0 small text-truncate">News anchor</p>
+                        <a class="h6 mb-0" href="#!">最新新闻</a>
+                        <p class="mb-0 small text-truncate">最新新闻222</p>
                       </div>
                       <!-- Button -->
                       <a class="btn btn-primary rounded-circle icon-md ms-auto" href="#"><i
@@ -946,14 +950,14 @@ Header END -->
                       <!-- Avatar -->
                       <div class="avatar">
                         <a href="#">
-                          <img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="" />
+                          <img class="avatar-img rounded-circle" src="assets/images/avatar/placeholder.jpg" alt="" />
                         </a>
                       </div>
                       <!-- Title -->
                       <div class="overflow-hidden">
-                        <a class="h6 mb-0" href="#!">Lori Ferguson </a>
+                        <a class="h6 mb-0" href="#!">最新新闻</a>
                         <p class="mb-0 small text-truncate">
-                          Web Developer at Webestica
+                          最新新闻2111
                         </p>
                       </div>
                       <!-- Button -->
@@ -972,8 +976,8 @@ Header END -->
                       </div>
                       <!-- Title -->
                       <div class="overflow-hidden">
-                        <a class="h6 mb-0" href="#!">Carolyn Ortiz </a>
-                        <p class="mb-0 small text-truncate">News anchor</p>
+                        <a class="h6 mb-0" href="#!">111</a>
+                        <p class="mb-0 small text-truncate">aaa最新新闻</p>
                       </div>
                       <!-- Button -->
                       <a class="btn btn-primary-soft rounded-circle icon-md ms-auto" href="#"><i
@@ -1030,8 +1034,8 @@ Header END -->
                       </h6>
                       <small>6hr</small>
                     </div>
-                   
-                  
+
+
                   </div>
                   <!-- Card body END -->
                 </div>
@@ -2104,12 +2108,16 @@ JS libraries, plugins and custom scripts -->
 <script src="assets/vendor/flatpickr/dist/flatpickr.min.js"></script>
 <script src="assets/vendor/plyr/plyr.js"></script>
 
+<!-- <script src="assets/vendor/dropzone/dist/min/dropzone.min.js"></script> -->
 
 <!-- Template Functions -->
 <script src="assets/js/functions.js"></script>
 
 <script src="assets/js/vue.global.min.js"></script>
 <script src="assets/js/axios.min.js"></script>
+
+<link rel="stylesheet" href="assets/js/element-plus.css" />
+<script src="assets/js/element-plus.js"></script>
 
 <script>
   const app = {
@@ -2126,6 +2134,7 @@ JS libraries, plugins and custom scripts -->
         commentList: [],
         fileInfoList: [],
         displayStatus: [],
+        videoPage: 0,//视频内容页数 默认1
       };
     },
     methods: {
@@ -2190,8 +2199,8 @@ JS libraries, plugins and custom scripts -->
       },
 
       submitComment(contentId) {
-         //this.showVideoComment(contentId); //发送评论的时候 ，打开 并展示评论 
-         //下面axios 同showVideoComment
+        //this.showVideoComment(contentId); //发送评论的时候 ，打开 并展示评论 
+        //下面axios 同showVideoComment
         //  this.getVideoComment();
 
 
@@ -2222,19 +2231,19 @@ JS libraries, plugins and custom scripts -->
 
           document.getElementById(contentId).style.display = "block";
 
-         
+
         } else {
           this.displayStatus = this.displayStatus.filter((i) => i !== contentId);
           //操作评论列表显示或隐藏
-        //  document.getElementById(contentId).style.display = "none";
+          //  document.getElementById(contentId).style.display = "none";
 
-          
+
         }
 
 
 
 
-        
+
 
         axios
           .post(
@@ -2270,14 +2279,15 @@ JS libraries, plugins and custom scripts -->
 
       getVideoList() {
 
-        axios.defaults.withCredentials = true;
+        this.videoPage = this.videoPage + 1;
 
+        axios.defaults.withCredentials = true;
         axios
           .post(
             "http://127.0.0.1/api/video/videoList/getVideoList",
             {
-              phone: this.phone,
-              password: this.phonecode, //验证码作为密码传给后端
+              page: this.videoPage,
+
             },
 
             {
@@ -2289,6 +2299,7 @@ JS libraries, plugins and custom scripts -->
           )
           .then((response) => {
             var data = response.data;
+            console.log(data.data);
 
             this.videoList = this.videoList.concat(data.data);
 
@@ -2304,7 +2315,7 @@ JS libraries, plugins and custom scripts -->
 
             this.videoIdList = myArray;
 
-            console.log(this.videoIdList);
+
           })
           .catch((error) => {
             console.log(error);
@@ -2321,14 +2332,69 @@ JS libraries, plugins and custom scripts -->
           }
         }
       },
+
+      computedDayNum(data) {
+      
+
+        // 将日期字符串转换为Date对象
+        var givenDate = new Date(data);
+       
+        // 当前日期
+        var currentDate = new Date();
+
+        // 将两个日期转换为时间戳，并计算它们之间的毫秒数差异
+        var timeDiff = currentDate.getTime() - givenDate.getTime();
+        console.log(timeDiff);
+        // 将毫秒数差异转换为天数
+        return Math.floor(timeDiff / (1000 * 3600 * 24));
+
+      },
+
     },
 
     mounted() {
       this.getVideoList();
+
     },
+
+
   };
 
   const vm = Vue.createApp(app).mount("#app");
+
+  window.onload = function () {
+    checkloginstatus();
+
+
+  };
+
+
+  //检查是否有登录cookie,没有登录,就展示登录button
+  function checkloginstatus() {
+
+    var hasUserinfoCookie = document.cookie.split(';').some(function (cookie) {
+      return cookie.trim().startsWith('userInfo=');
+    });
+
+    if (hasUserinfoCookie) {
+      console.log('Cookie "userInfo" 存在');
+
+
+
+      document.getElementById('nologinStatusNav').style.display = 'none';
+
+    } else {
+      console.log('Cookie "userInfo" 不存在');
+
+      const message = ElementPlus.ElMessage.success('还没有登录,请登录');
+
+      document.getElementById('loginStatusNav').style.display = 'none';
+
+    }
+
+
+
+  }
 
 
 
@@ -2413,10 +2479,10 @@ JS libraries, plugins and custom scripts -->
         },
       },
 
-      {
-              withCredentials: true,
+        {
+          withCredentials: true,
 
-            },
+        },
 
 
       )
