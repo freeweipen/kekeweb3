@@ -332,7 +332,8 @@ Header START -->
         <!-- Nav right START 没有登录样式 -->
         <ul id="nologinStatusNav" class="nav flex-nowrap align-items-center ms-sm-3 list-unstyled">
           <li class="nav-item ms-2">
-            <a class="btn btn-primary-soft btn-sm my-2 text-center" href="sign-in.html">登录</a>
+            <a class="btn btn-primary-soft btn-sm my-2 text-center" href="#"  v-router-link="{ path: '/sign-in' }" >登录111</a>
+            <router-link to="/sign-in">Go to Aboutsign-in</router-link>
           </li>
         </ul>
         <!-- Nav right END 没有登录样式-->
@@ -2095,13 +2096,396 @@ import '@/assets/css/mycustom.css'
 
 
 export default {
-  setup () {
+  
+ 
+  data() {
+      return {
+        phone: null,
+        phonecode: null,
+        videoList: [],
+        comment: "",
+        userId: "",
+        contentId: null,
+        videoIdList: [],
+        commentPage: 1,
+        commentList: [],
+        fileInfoList: [],
+        displayStatus: [],
+        videoPage: 0,//视频内容页数 默认1
+      };
+    },
+    methods: {
+      showVideoComment(id) {
+        if (!this.displayStatus.includes(id)) {
+          this.displayStatus.push(id);
+
+          axios
+            .post(
+              "http://127.0.0.1/api/comment/userComment/getVideoComment",
+              {
+                contentId: this.videoIdList.toString(),
+                commentPage: this.commentPage,
+              },
+              {
+                withCredentials: true, //设置跨域的时候传递cookie，需要服务端的配合
+              }
+            )
+            .then((response) => {
+              var data = response.data.data;
+
+              this.commentList = data;
+            })
+            .catch((error) => {
+              console.log(error);
+            });
+
+          document.getElementById(id).style.display = "block";
+
+          return;
+        } else {
+          this.displayStatus = this.displayStatus.filter((i) => i !== id);
+          //操作评论列表显示或隐藏
+          document.getElementById(id).style.display = "none";
+
+          return;
+        }
+      },
+
+      getVideoComment() {
+        axios
+          .post(
+            "http://127.0.0.1/api/comment/userComment/getVideoComment",
+            {
+              contentId: this.videoIdList.toString(),
+              commentPage: this.commentPage,
+            },
+            {
+              withCredentials: true, //设置跨域的时候传递cookie，需要服务端的配合
+            }
+          )
+          .then((response) => {
+            var data = response.data.data;
+
+            this.commentList = data;
+
+            //this.commentList = this.commentList.concat(result);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      },
+
+      submitComment(contentId) {
+        //this.showVideoComment(contentId); //发送评论的时候 ，打开 并展示评论 
+        //下面axios 同showVideoComment
+        //  this.getVideoComment();
+
+
+
+
+        if (!this.displayStatus.includes(contentId)) {
+          this.displayStatus.push(contentId);
+
+          axios
+            .post(
+              "http://127.0.0.1/api/comment/userComment/getVideoComment",
+              {
+                contentId: this.videoIdList.toString(),
+                commentPage: this.commentPage,
+              },
+              {
+                withCredentials: true, //设置跨域的时候传递cookie，需要服务端的配合
+              }
+            )
+            .then((response) => {
+              var data = response.data.data;
+
+              this.commentList = data;
+            })
+            .catch((error) => {
+              console.log(error);
+            });
+
+          document.getElementById(contentId).style.display = "block";
+
+
+        } else {
+          this.displayStatus = this.displayStatus.filter((i) => i !== contentId);
+          //操作评论列表显示或隐藏
+          //  document.getElementById(contentId).style.display = "none";
+
+
+        }
+
+
+
+
+
+
+        axios
+          .post(
+            "http://127.0.0.1/api/comment/userComment/submitComment",
+            {
+              comment: this.comment, //用户的具体评论
+              userId: this.userId, //评论用户的id,登录的 时候记录下来
+              contentId: contentId, //在哪个内容下评论的
+            },
+            {
+              withCredentials: true, //设置跨域的时候传递cookie，需要服务端的配合
+            }
+          )
+          .then((response) => {
+            var data = response.data;
+            //这是用户添加的评论对象，直接添加到本地commentList
+            var comment = { name: "John", comment: this.comment };
+
+            console.log(
+              "commment" + this.commentList[contentId].unshift(comment)
+            );
+
+            console.log(
+              "ccccjson" + JSON.stringify(this.commentList[contentId])
+            );
+
+            // data = JSON.stringify(this.commentList[contentId]);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      },
+
+      getVideoList() {
+
+        this.videoPage = this.videoPage + 1;
+
+        axios.defaults.withCredentials = true;
+        axios
+          .post(
+            "http://127.0.0.1/api/video/videoList/getVideoList",
+            {
+              page: this.videoPage,
+
+            },
+
+            {
+              withCredentials: true,
+
+            },
+
+
+          )
+          .then((response) => {
+            var data = response.data;
+            console.log(data.data);
+
+            this.videoList = this.videoList.concat(data.data);
+
+            //   this.videoList = data.data;
+
+            var variableArray = this.videoList;
+
+            var myArray = [];
+            for (var i = 0; i < variableArray.length; i++) {
+              var list = variableArray[i];
+              myArray.push(list.id);
+            }
+
+            this.videoIdList = myArray;
+
+
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      },
+
+      //选择文件的时候 ，删除不想上传的文件
+      deleteFileItem(name) {
+        // this.fileInfoList.splice(index, 1);
+
+        for (let index = 0; index < this.fileInfoList.length; index++) {
+          if (this.fileInfoList[index].name === name) {
+            this.fileInfoList.splice(index, 1);
+          }
+        }
+      },
+
+      computedDayNum(data) {
+      
+
+        // 将日期字符串转换为Date对象
+        var givenDate = new Date(data);
+       
+        // 当前日期
+        var currentDate = new Date();
+
+        // 将两个日期转换为时间戳，并计算它们之间的毫秒数差异
+        var timeDiff = currentDate.getTime() - givenDate.getTime();
+        console.log(timeDiff);
+        // 将毫秒数差异转换为天数
+        return Math.floor(timeDiff / (1000 * 3600 * 24));
+
+      },
+
+    },
+
+    mounted() {
+      this.getVideoList();
+
+    },
+
+  }
+
     
 
-    return {}
+</script>
+
+
+
+
+window.onload = function () {
+  checkloginstatus();
+
+
+};
+
+
+//检查是否有登录cookie,没有登录,就展示登录button
+function checkloginstatus() {
+
+  var hasUserinfoCookie = document.cookie.split(';').some(function (cookie) {
+    return cookie.trim().startsWith('userInfo=');
+  });
+
+  if (hasUserinfoCookie) {
+    console.log('Cookie "userInfo" 存在');
+
+
+
+    document.getElementById('nologinStatusNav').style.display = 'none';
+
+  } else {
+    console.log('Cookie "userInfo" 不存在');
+
+    const message = ElementPlus.ElMessage.success('还没有登录,请登录');
+
+    document.getElementById('loginStatusNav').style.display = 'none';
+
+  }
+
+
+
+}
+
+
+
+
+
+function triggerFileInput() {
+  var fileInput = document.createElement("input");
+  fileInput.type = "file";
+  fileInput.multiple = true;
+  fileInput.style.display = "none";
+  fileInput.onchange = function () {
+    var files = fileInput.files;
+    for (var i = 0; i < files.length; i++) {
+      uploadFile(files[i]);
+    }
+  };
+  document.body.appendChild(fileInput);
+  fileInput.click();
+}
+
+function dragOverHandler(event) {
+  event.preventDefault();
+}
+function dropHandler(event) {
+  event.preventDefault();
+  var files = event.dataTransfer.files;
+  for (var i = 0; i < files.length; i++) {
+    uploadFile(files[i]);
   }
 }
-</script>
+
+var formData = new FormData();
+
+var fileArry = [];
+
+function uploadFile(file) {
+  var fileSize = file.size; // Get the size of the file in bytes
+  fileSize = (fileSize / 1024 / 1024).toFixed(2);
+  var fileName = file.name; // Get the name of the file
+
+  var videoList = new Object();
+  videoList.name = fileName;
+  videoList.info = "已选择文件" + fileName + "  文件大小 " + fileSize + "M";
+
+  var temp = vm.fileInfoList;
+  temp.push(videoList);
+  vm.fileInfoList = temp;
+
+  fileArry.push(file);
+
+  //formData.delete('file1');
+
+  formData.append("title", "titleaaa");
+
+  // var formData = new FormData();
+  // formData.append('file', file);
+  // var xhr = new XMLHttpRequest();
+  // xhr.open('POST', 'http://127.0.0.1/api/video/uploadVideo/uploadoss2', true);
+  // xhr.onload = function () {
+  //   if (xhr.status === 200) {
+  //     alert('File uploaded successfully');
+  //   } else {
+  //     alert('File upload failed');
+  //   }
+  // };
+  // xhr.send(formData);
+}
+
+function uploadFullVideo() {
+  fileArry.forEach((element) => {
+    vm.fileInfoList.forEach((el) => {
+      if (el.name === element.name) {
+        formData.append("files", element);
+      }
+    });
+  });
+
+  axios
+    .post("http://127.0.0.1/api/video/uploadVideo/uploadoss2", formData, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    },
+
+      {
+        withCredentials: true,
+
+      },
+
+
+    )
+    .then((response) => {
+      console.log("Files uploaded successfully");
+    })
+    .catch((error) => {
+      console.error("Error uploading files: ", error);
+    });
+}
+
+function clearSelectFile() {
+  vm.fileInfoList = [];
+  fileArry = [];
+
+  formData.delete("files");
+  formData.delete("title");
+}
+
+
+
+
 
 <style lang="scss" scoped>
 

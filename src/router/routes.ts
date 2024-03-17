@@ -13,5 +13,19 @@ export const constantRoute = [
     },
    
   },
+  
+  {
+   
+    path: '/sign-in',
+    component: () => import('@/views/html/sign-in.vue'),
+    name: 'sign-in',
+    meta: {
+      title: '',
+      hidden: false,
+      icon: '',
+    },
+   
+  },
+
 
 ]
