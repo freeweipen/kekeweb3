@@ -1,8 +1,8 @@
 ﻿<template>
  
-<div id="app">
 
-<body>
+
+
   <!-- =======================
 Header START -->
   <header class="navbar-light fixed-top header-static bg-mode">
@@ -2057,8 +2057,8 @@ Header END -->
     </div>
   </div>
   <!-- Modal create events END -->
-</body>
-</div>
+
+
 
 </template>
 
