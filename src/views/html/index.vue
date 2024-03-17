@@ -642,7 +642,7 @@ Header END -->
                     (56)</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#!" @click="showVideoComment(item.id)">
+                  <a class="nav-link" href="javascript:void(null)" @click="showVideoComment(item.id)">
                     <i class="bi bi-chat-fill pe-1"></i>Comments (12)</a>
                 </li>
                 <!-- Card share action START -->
