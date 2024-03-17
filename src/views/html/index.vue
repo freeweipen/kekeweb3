@@ -333,7 +333,7 @@ Header START -->
         <ul id="nologinStatusNav" class="nav flex-nowrap align-items-center ms-sm-3 list-unstyled">
           <li class="nav-item ms-2">
             <a class="btn btn-primary-soft btn-sm my-2 text-center" href="#"  v-router-link="{ path: '/sign-in' }" >登录111</a>
-            <router-link to="/sign-in">Go to Aboutsign-in</router-link>
+            <router-link to="/sign-in">Go to About</router-link>
           </li>
         </ul>
         <!-- Nav right END 没有登录样式-->
@@ -2074,7 +2074,7 @@ import '@/assets/vendor/choices.js/public/assets/scripts/choices.min.js'
 import '@/assets/vendor/glightbox-master/dist/js/glightbox.min.js'
 import '@/assets/vendor/flatpickr/dist/flatpickr.min.js'
 import '@/assets/vendor/plyr/plyr.js'
-// import '@/assets/js/functions.js'
+import '@/assets/js/functions.js'
 import '@/assets/js/vue.global.min.js'
 import '@/assets/js/axios.min.js'
 
@@ -2327,51 +2327,51 @@ export default {
 
       },
 
+
+
+
     },
 
     mounted() {
       this.getVideoList();
+      checkloginstatus();
 
     },
 
   }
 
-    
-
-</script>
 
 
 
 
-window.onload = function () {
-  checkloginstatus();
 
 
-};
+
+  
 
 
 //检查是否有登录cookie,没有登录,就展示登录button
 function checkloginstatus() {
 
-  var hasUserinfoCookie = document.cookie.split(';').some(function (cookie) {
-    return cookie.trim().startsWith('userInfo=');
-  });
+var hasUserinfoCookie = document.cookie.split(';').some(function (cookie) {
+  return cookie.trim().startsWith('userInfo=');
+});
 
-  if (hasUserinfoCookie) {
-    console.log('Cookie "userInfo" 存在');
+if (hasUserinfoCookie) {
+  console.log('Cookie "userInfo" 存在');
 
 
 
-    document.getElementById('nologinStatusNav').style.display = 'none';
+  document.getElementById('nologinStatusNav').style.display = 'none';
 
-  } else {
-    console.log('Cookie "userInfo" 不存在');
+} else {
+  console.log('Cookie "userInfo" 不存在');
 
-    const message = ElementPlus.ElMessage.success('还没有登录,请登录');
+  const message = ElementPlus.ElMessage.success('还没有登录,请登录');
 
-    document.getElementById('loginStatusNav').style.display = 'none';
+  document.getElementById('loginStatusNav').style.display = 'none';
 
-  }
+}
 
 
 
@@ -2382,29 +2382,29 @@ function checkloginstatus() {
 
 
 function triggerFileInput() {
-  var fileInput = document.createElement("input");
-  fileInput.type = "file";
-  fileInput.multiple = true;
-  fileInput.style.display = "none";
-  fileInput.onchange = function () {
-    var files = fileInput.files;
-    for (var i = 0; i < files.length; i++) {
-      uploadFile(files[i]);
-    }
-  };
-  document.body.appendChild(fileInput);
-  fileInput.click();
-}
-
-function dragOverHandler(event) {
-  event.preventDefault();
-}
-function dropHandler(event) {
-  event.preventDefault();
-  var files = event.dataTransfer.files;
+var fileInput = document.createElement("input");
+fileInput.type = "file";
+fileInput.multiple = true;
+fileInput.style.display = "none";
+fileInput.onchange = function () {
+  var files = fileInput.files;
   for (var i = 0; i < files.length; i++) {
     uploadFile(files[i]);
   }
+};
+document.body.appendChild(fileInput);
+fileInput.click();
+}
+
+function dragOverHandler(event) {
+event.preventDefault();
+}
+function dropHandler(event) {
+event.preventDefault();
+var files = event.dataTransfer.files;
+for (var i = 0; i < files.length; i++) {
+  uploadFile(files[i]);
+}
 }
 
 var formData = new FormData();
@@ -2412,76 +2412,88 @@ var formData = new FormData();
 var fileArry = [];
 
 function uploadFile(file) {
-  var fileSize = file.size; // Get the size of the file in bytes
-  fileSize = (fileSize / 1024 / 1024).toFixed(2);
-  var fileName = file.name; // Get the name of the file
+var fileSize = file.size; // Get the size of the file in bytes
+fileSize = (fileSize / 1024 / 1024).toFixed(2);
+var fileName = file.name; // Get the name of the file
 
-  var videoList = new Object();
-  videoList.name = fileName;
-  videoList.info = "已选择文件" + fileName + "  文件大小 " + fileSize + "M";
+var videoList = new Object();
+videoList.name = fileName;
+videoList.info = "已选择文件" + fileName + "  文件大小 " + fileSize + "M";
 
-  var temp = vm.fileInfoList;
-  temp.push(videoList);
-  vm.fileInfoList = temp;
+var temp = vm.fileInfoList;
+temp.push(videoList);
+vm.fileInfoList = temp;
 
-  fileArry.push(file);
+fileArry.push(file);
 
-  //formData.delete('file1');
+//formData.delete('file1');
 
-  formData.append("title", "titleaaa");
+formData.append("title", "titleaaa");
 
-  // var formData = new FormData();
-  // formData.append('file', file);
-  // var xhr = new XMLHttpRequest();
-  // xhr.open('POST', 'http://127.0.0.1/api/video/uploadVideo/uploadoss2', true);
-  // xhr.onload = function () {
-  //   if (xhr.status === 200) {
-  //     alert('File uploaded successfully');
-  //   } else {
-  //     alert('File upload failed');
-  //   }
-  // };
-  // xhr.send(formData);
+// var formData = new FormData();
+// formData.append('file', file);
+// var xhr = new XMLHttpRequest();
+// xhr.open('POST', 'http://127.0.0.1/api/video/uploadVideo/uploadoss2', true);
+// xhr.onload = function () {
+//   if (xhr.status === 200) {
+//     alert('File uploaded successfully');
+//   } else {
+//     alert('File upload failed');
+//   }
+// };
+// xhr.send(formData);
 }
 
 function uploadFullVideo() {
-  fileArry.forEach((element) => {
-    vm.fileInfoList.forEach((el) => {
-      if (el.name === element.name) {
-        formData.append("files", element);
-      }
-    });
+fileArry.forEach((element) => {
+  vm.fileInfoList.forEach((el) => {
+    if (el.name === element.name) {
+      formData.append("files", element);
+    }
   });
+});
 
-  axios
-    .post("http://127.0.0.1/api/video/uploadVideo/uploadoss2", formData, {
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
+axios
+  .post("http://127.0.0.1/api/video/uploadVideo/uploadoss2", formData, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  },
+
+    {
+      withCredentials: true,
+
     },
 
-      {
-        withCredentials: true,
 
-      },
-
-
-    )
-    .then((response) => {
-      console.log("Files uploaded successfully");
-    })
-    .catch((error) => {
-      console.error("Error uploading files: ", error);
-    });
+  )
+  .then((response) => {
+    console.log("Files uploaded successfully");
+  })
+  .catch((error) => {
+    console.error("Error uploading files: ", error);
+  });
 }
 
 function clearSelectFile() {
-  vm.fileInfoList = [];
-  fileArry = [];
+vm.fileInfoList = [];
+fileArry = [];
 
-  formData.delete("files");
-  formData.delete("title");
+formData.delete("files");
+formData.delete("title");
 }
+
+
+
+
+
+
+
+
+
+    
+
+</script>
 
 
 
