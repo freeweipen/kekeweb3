@@ -2062,7 +2062,6 @@ Header END -->
 <script>
 
 
-
 import '@/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js'
 import '@/assets/vendor/tiny-slider/dist/tiny-slider.js'
 import '@/assets/vendor/OverlayScrollbars-master/js/OverlayScrollbars.min.js'
@@ -2070,9 +2069,28 @@ import '@/assets/vendor/choices.js/public/assets/scripts/choices.min.js'
 import '@/assets/vendor/glightbox-master/dist/js/glightbox.min.js'
 import '@/assets/vendor/flatpickr/dist/flatpickr.min.js'
 import '@/assets/vendor/plyr/plyr.js'
-import '@/assets/js/functions.js'
+// import '@/assets/js/functions.js'
 import '@/assets/js/vue.global.min.js'
 import '@/assets/js/axios.min.js'
+
+
+
+
+import '@/assets/vendor/font-awesome/css/all.min.css'
+import '@/assets/vendor/bootstrap-icons/bootstrap-icons.css'
+import '@/assets/vendor/OverlayScrollbars-master/css/OverlayScrollbars.min.css'
+import '@/assets/vendor/tiny-slider/dist/tiny-slider.css'
+import '@/assets/vendor/choices.js/public/assets/styles/choices.min.css'
+import '@/assets/vendor/glightbox-master/dist/css/glightbox.min.css'
+import '@/assets/vendor/dropzone/dist/dropzone.css'
+import '@/assets/vendor/flatpickr/dist/flatpickr.css'
+import '@/assets/vendor/plyr/plyr.css'
+import '@/assets/css/style.css'
+import '@/assets/css/mycustom.css'
+
+
+
+
 
 
 
@@ -2084,19 +2102,6 @@ import '@/assets/js/axios.min.js'
 <style lang="scss" scoped>
 
 
-
-
-@import '@/assets/vendor/font-awesome/css/all.min.css'
-@import '@/assets/vendor/bootstrap-icons/bootstrap-icons.css'
-@import '@/assets/vendor/OverlayScrollbars-master/css/OverlayScrollbars.min.css'
-@import '@/assets/vendor/tiny-slider/dist/tiny-slider.css'
-@import '@/assets/vendor/choices.js/public/assets/styles/choices.min.css'
-@import '@/assets/vendor/glightbox-master/dist/css/glightbox.min.css'
-@import '@/assets/vendor/dropzone/dist/dropzone.css'
-@import '@/assets/vendor/flatpickr/dist/flatpickr.css'
-@import '@/assets/vendor/plyr/plyr.css'
-@import '@/assets/css/style.css'
-@import '@/assets/css/mycustom.css'
 
 
 
