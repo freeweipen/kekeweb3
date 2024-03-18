@@ -8,7 +8,8 @@ export default defineConfig(({ command, mode }) => {
   //获取各种环境下的对应的变量
   let env = loadEnv(mode, process.cwd());
   return {
-    publicPath: 'https://gitee.com/jch1011/guiguzhenxuan',
+    publicPath: 'http://dev.kekechat.com/',
+    base: 'http://dev.kekechat.com/',
     plugins: [vue(),
 
 
