@@ -4,7 +4,7 @@ export const constantRoute = [
   {
    
     path: '/',
-    component: () => import('@/views/html/index.vue'),
+    component: () => import('@/views/page/index.vue'),
     name: 'index',
     meta: {
       title: '',
@@ -13,6 +13,63 @@ export const constantRoute = [
     },
    
   },
+
+  {
+   
+    path: '/login',
+    component: () => import('@/views/page/login.vue'),
+    name: 'login',
+    meta: {
+      title: '',
+      hidden: false,
+      icon: '',
+    },
+   
+  },
+
+  {
+   
+    path: '/register',
+    component: () => import('@/views/page/register.vue'),
+    name: 'register',
+    meta: {
+      title: '',
+      hidden: false,
+      icon: '',
+    },
+   
+  },
+
+  {
+   
+    path: '/paymentvip',
+    component: () => import('@/views/page/paymentvip.vue'),
+    name: 'paymentvip',
+    meta: {
+      title: '',
+      hidden: false,
+      icon: '',
+    },
+   
+  },
+
+
+
+
+
+  {
+   
+    path: '/',
+    component: () => import('@/views/page/index.vue'),
+    name: 'index',
+    meta: {
+      title: '',
+      hidden: false,
+      icon: '',
+    },
+   
+  },
+
   
   {
    

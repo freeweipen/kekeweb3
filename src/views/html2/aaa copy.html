@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto Play Video on Scroll</title>
+<style>
+    body {
+        height: 2000px; /* 用于测试滚动效果 */
+    }
+
+    .video-container {
+        width: 100%;
+        height: 500px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+</head>
+<body>
+<div class="video-container">
+    <video class="video" controls>
+        <source src="
+        https://springbootacc.oss-cn-chengdu.aliyuncs.com/uploadVideo/09f8e9ad-7e2d-4514-a01b-2720f77684d2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+<div class="video-container">
+    <video class="video" controls>
+        <source src="
+        https://springbootacc.oss-cn-chengdu.aliyuncs.com/uploadVideo/09f8e9ad-7e2d-4514-a01b-2720f77684d2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<script>
+    const videos = document.querySelectorAll('.video');
+    const videoContainers = document.querySelectorAll('.video-container');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const video = entry.target.querySelector('video');
+            if (entry.isIntersecting) {
+                // 暂停其他视频
+                videos.forEach(v => {
+                    if (v !== video) {
+                        v.pause();
+                    }
+                });
+                // 播放当前视频
+                video.play();
+            } else {
+                video.pause();
+            }
+        });
+    }, { threshold: 0.8 });
+
+    videoContainers.forEach(videoContainer => {
+        observer.observe(videoContainer);
+    });
+</script>
+</body>
+</html>

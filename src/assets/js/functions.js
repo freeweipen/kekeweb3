@@ -78,7 +78,7 @@ var e = {
 				e.popOverFunc(),
 				e.videoPlyr(),
 				e.lightBox(),
-				//e.darkMode(),
+			//	e.darkMode(),
 				e.sidebarToggleStart(),
 				e.sidebarToggleEnd(),
 				e.choicesSelect(),

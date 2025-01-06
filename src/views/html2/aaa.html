@@ -1,0 +1,117 @@
+<!DOCTYPE html>  
+<html lang="zh-CN">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>微博样式页面</title>  
+    <style>  
+        * {  
+            box-sizing: border-box;  
+        }  
+
+        body {  
+            margin: 0;  
+            font-family: Arial, sans-serif;  
+        }  
+
+        .container {  
+            display: flex;  
+            height: 100vh; /* 设置容器高度为视口高度 */  
+        }  
+
+        .sidebar-left, .sidebar-right {  
+            width: 200px; /* 固定宽度 */  
+            background-color: #f0f0f0;  
+            padding: 20px;  
+            height: 100%; /* 固定高度 */  
+        }  
+
+        .main-content {  
+            width: 600px; 
+            padding: 20px;  
+            overflow-y: auto; /* 允许垂直滚动 */  
+            height: 100%; /* 固定高度 */  
+            background-color: #ffffff;  
+            position: relative; /* 使得可以在此元素上滚动 */  
+        }  
+
+        .post {  
+            margin-bottom: 20px;  
+            padding: 10px;  
+            border: 1px solid #ccc;  
+            border-radius: 5px;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <div class="container">  
+        <div class="sidebar-left">  
+            <h2>左侧内容</h2>  
+            <p>这里是左侧固定内容</p>  
+        </div>  
+        
+        <div class="main-content" id="scrollable-content">  
+            <h1>中间可滑动内容</h1>  
+            <div class="post">  
+                <p>这是一个动态内容块 1。</p>  
+                <p>内容示例信息...</p>  
+            </div>  
+            <div class="post">  
+                <p>这是一个动态内容块 2。</p>  
+                <p>内容示例信息...</p>  
+            </div>  
+            <div class="post">  
+                <p>这是一个动态内容块 3。</p>  
+                <p>内容示例信息...</p>  
+            </div>  
+            <div class="post">  
+                <p>这是一个动态内容块 4。</p>  
+                <p>内容示例信息...</p>  
+            </div>  
+            <div class="post">  
+                <p>这是一个动态内容块 5。</p>  
+                <p>内容示例信息...</p>  
+            </div>  
+            <div class="post">  
+                <p>这是一个动态内容块 6。</p>  
+                <p>内容示例信息...</p>  
+            </div>  
+            <div class="post">  
+                <p>这是一个动态内容块 7。</p>  
+                <p>内容示例信息...</p>  
+            </div>  
+            <div class="post">  
+                <p>这是一个动态内容块 8。</p>  
+                <p>内容示例信息...</p>  
+            </div>  
+            <div class="post">  
+                <p>这是一个动态内容块 9。</p>  
+                <p>内容示例信息...</p>  
+            </div>  
+            <div class="post">  
+                <p>这是一个动态内容块 10。</p>  
+                <p>内容示例信息...</p>  
+            </div>  
+        </div>  
+
+        <div class="sidebar-right">  
+            <h2>右侧内容</h2>  
+            <p>这里是右侧固定内容</p>  
+        </div>  
+    </div>  
+
+    <script>  
+        // 获取主内容区域  
+        const scrollableContent = document.getElementById('scrollable-content');  
+
+        // 监听窗口的滚动事件  
+        window.addEventListener('wheel', (event) => {  
+            // 禁用默认滚动行为  
+            event.preventDefault();  
+
+            // 根据滚轮滚动的方向调整中间内容的 scrollTop  
+            scrollableContent.scrollTop += event.deltaY; // deltaY 表示滚动的垂直距离  
+        }, { passive: false }); // 使用 passive: false 以允许调用 preventDefault  
+    </script>  
+</body>  
+</html>

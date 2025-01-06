@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Social - Network, Community and Event Theme</title>
+
+  <!-- Meta Tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="author" content="Webestica.com" />
+  <meta name="description" content="Bootstrap 5 based Social Media Network and Community Theme" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/favicon.ico" />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+
+  <!-- Plugins CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css" />
+
+  <!-- Theme CSS -->
+  <link id="style-switch" rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+  <!-- 自定义css -->
+  <link rel="stylesheet" type="text/css" href="assets/css/sign-in.css" />
+</head>
+
+<body id="app">
+  <!-- **************** MAIN CONTENT START **************** -->
+  <main>
+    <!-- Container START -->
+    <div class="container">
+      <div class="row justify-content-center align-items-center vh-100 py-5">
+        <!-- Main content START -->
+        <div class="col-sm-10 col-md-8 col-lg-7 col-xl-6 col-xxl-5">
+          <!-- Sign in START -->
+          <div class="card card-body text-center p-4 p-sm-5">
+            <!-- Title -->
+            <h1 class="mb-2">登录</h1>
+            <p class="mb-0">
+              没有账号?<a href="sign-in.html">
+                跳转注册页面</a>
+            </p>
+            <!-- Form START 改form 为div 防止表单默认提交 -->
+            <div class="mt-sm-4">
+              <!-- Email -->
+              <!-- <div class="mb-3 input-group-lg">
+              <input type="email" class="form-control" placeholder="Enter email">
+            </div> -->
+
+            <div class="mb-3 input-group-lg">
+              <input v-model="userAccount" type="text" class="form-control"  placeholder="输入账号" />
+
+
+            </div>
+
+
+              <div class="mb-3 input-group-lg">
+                <input v-model="password" type="password" class="form-control"  placeholder="输入密码" />
+
+
+              </div>
+
+      
+
+          
+
+          
+
+
+
+
+
+
+          
+
+
+              
+         
+
+
+
+            </div>
+            <!-- Remember me -->
+            <div class="mb-3 d-sm-flex justify-content-between">
+              <div>
+                <input type="checkbox" class="form-check-input" id="rememberCheck" />
+                <label class="form-check-label" for="rememberCheck">记住我?</label>
+              </div>
+              <a href="forgot-password.html">忘记密码?</a>
+            </div>
+            <!-- Button 改submit为button 防止默认提交-->
+            <div class="d-grid">
+              <button type="button" @click="loginWithAccount" class="btn btn-lg btn-primary">
+                登录
+              </button>
+            </div>
+            <!-- Copyright -->
+            <p class="mb-0 mt-3">
+              ©2022 <a href="http://wwww.kekechat.com/">kekechat.</a> All
+              rights reserved
+            </p>
+          </div>
+          <!-- Form END -->
+        </div>
+        <!-- Sign in START -->
+      </div>
+    </div>
+    <!-- Row END -->
+    </div>
+    <!-- Container END -->
+  </main>
+  <!-- **************** MAIN CONTENT END **************** -->
+
+  <!-- =======================
+JS libraries, plugins and custom scripts -->
+
+  <!-- Bootstrap JS -->
+  <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Vendors -->
+  <script src="assets/vendor/pswmeter/pswmeter.min.js"></script>
+
+  <!-- Template Functions -->
+  <script src="assets/js/functions.js"></script>
+
+  <script src="assets/js/vue.global.min.js"></script>
+
+  <script src="assets/js/axios.min.js"></script>
+  
+<link rel="stylesheet" href="assets/js/element-plus.css" />
+<script src="assets/js/element-plus.js"></script>
+
+
+  <script>
+
+
+    const app = {
+      data() {
+        return {
+          userAccount: null,
+          password: null,
+          passwordRepeat: null,
+
+        };
+      },
+      methods: {
+
+
+
+        loginWithAccount() {
+
+         
+
+          axios
+            .post("http://service.kekechat.com/api/user/LoginRegister/loginWithAccount", {
+              userAccount: this.userAccount,
+              password: this.password, //验证码作为密码传给后端
+
+            })
+            .then(function (response) {
+              var data = response.data;
+
+              var token = data.data;
+              //设置cookie
+              //document.cookie = "userInfo="+token;
+
+
+              // 设置一个名为 "username" 的 cookie，过期时间为一周后
+              var d = new Date();
+d.setTime(d.getTime() + 3000 * 24 * 60 * 60 * 1000); // 3000 days later
+var expires = "expires=" + d.toUTCString();
+document.cookie = "userInfo=" + token + "; " + expires + "; domain=.kekechat.com; path=/";
+
+
+
+              //返回上一级
+              window.history.back();
+
+              // window.location.href="http://127.0.0.1/";
+
+              data = JSON.stringify(data);
+
+        
+
+              
+            const message = ElementPlus.ElMessage.success("成功登录,正在跳转");
+
+
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
+        },
+
+
+
+
+
+
+      },
+    };
+
+    Vue.createApp(app).mount("#app");
+  </script>
+</body>
+
+
+
+</html>

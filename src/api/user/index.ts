@@ -4,7 +4,7 @@ import type {
   loginFormData,
   loginResponseData,
   userInfoReponseData,
-} from './type'
+} from '../user/type'
 //项目用户相关的请求地址
 enum API {
   LOGIN_URL = '/admin/acl/index/login',
@@ -20,3 +20,5 @@ export const reqUserInfo = () =>
   request.get<any, userInfoReponseData>(API.USERINFO_URL)
 //退出登录
 export const reqLogout = () => request.post<any, any>(API.LOGOUT_URL)
+
+
